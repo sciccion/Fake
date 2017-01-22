@@ -4,7 +4,6 @@
    RUN yum -y update; yum clean all
    RUN yum -y install epel-release; yum clean all
    RUN yum -y install nginx
-      RUN echo 'Hi, I am in your container' \
-       >/usr/share/nginx/html/index.html
+   RUN echo "Hi, I am in your container" >/usr/share/nginx/html/index.html
    CMD ["service nginx restart"]
    EXPOSE 80
